@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(96, 173, 173);
+            color: white;
+            font: normal 10pt arial;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sua natalidade</h1>
+    <p>
+        Em qual país você nasceu? <input type="text" id="txt1">
+    </p>
+    <button onclick="verificar()">Verificar
+    </button>
+    <p id="res"></p>
+
+    <script>
+        function verificar() {
+
+            var pais = document.getElementById("txt1").value;
+
+            if (pais.toLowerCase() === "brasil") {
+                document.getElementById("res").innerHTML = "Você é Brasileiro.";
+            } else {
+                document.getElementById("res").innerHTML = "Você é estrangeiro.";
+            }
+        }
+    </script>
+</body>
+</html>
